@@ -21,7 +21,7 @@ function iniciar () {
     while (vidas != 0) {   
         corUsuario = prompt(`Eu estou pensando em uma dessas cores:\n\n"${coresSorteadas.toString()}"\n\nQual cor eu estou pensando?\n\nVidas: ${vidas}`).toLowerCase()
 
-        if (corUsuario == '') { //verifica se o usuário não digitou a cor
+        if (corUsuario.length === 0 || !corUsuario.trim()) { //verifica se o usuário não digitou a cor
             alert('Por favor, digite uma cor!!')
         } 
         else if (!coresSorteadas.includes(corUsuario)) { //verificar se a cor existe 
